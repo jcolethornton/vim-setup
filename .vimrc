@@ -1,3 +1,4 @@
+"Following plugins using pathogen:
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -16,3 +17,4 @@ set bg=dark
 set backupdir-=.
 set backupdir^=~/tmp,/tmp
 let g:pymode_lint_on_write = 0
+let g:pymode_syntax_space_errors = 0

@@ -33,3 +33,31 @@ clone airline and aireline-themes into ~/.vim/bunlde
 **commentary** comment block
     cd ~/.vim/bundle
     git clone https://github.com/tpope/vim-commentary
+    
+# NeoVim set up
+Use Lunarvim configuration by Chris@Machine
+
+Include the following additional plugins in the config.lua file:
+
+-- Additional Plugins
+lvim.plugins = {
+    -- Themes
+    {"folke/tokyonight.nvim"}, {
+        "ray-x/lsp_signature.nvim",
+        config = function() require"lsp_signature".on_attach() end,
+        event = "InsertEnter"
+    },
+    {'morhetz/gruvbox'},
+    {'lvim-tech/lvim-colorscheme'},
+    -- Tmux intergration
+    {'christoomey/vim-tmux-navigator'},
+    -- ALE
+    {'dense-analysis/ale'},
+    -- Indent Lines
+    {'lukas-reineke/indent-blankline.nvim'},
+    -- Dad bod UI for tables (SQL/DF etc)
+    {'kristijanhusak/vim-dadbod-ui'},
+    {'tpope/vim-dadbod'},
+    -- Ipython support for Viz
+    {'bfredl/nvim-ipy'} -- "IPython to open console <F5> to run selection"
+}
